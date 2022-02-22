@@ -1,11 +1,10 @@
-# PatchDelta
+# InlineResponse503
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**action** | Option<**String**> | action | [optional]
-**relation_tuple** | Option<[**crate::models::InternalRelationTuple**](InternalRelationTuple.md)> |  | [optional]
+**errors** | **::std::collections::HashMap<String, String>** | Errors contains a list of errors that caused the not ready status. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
