@@ -1,4 +1,4 @@
-# RelationTuple
+# Relationship
 
 ## Properties
 

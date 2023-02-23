@@ -12,22 +12,22 @@
 
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
-pub struct HealthStatus {
-    /// Status always contains \"ok\".
-    #[serde(rename = "status", skip_serializing_if = "Option::is_none")]
-    pub status: Option<String>,
+pub struct Namespace {
+    /// Name of the namespace.
+    #[serde(rename = "name", skip_serializing_if = "Option::is_none")]
+    pub name: Option<String>,
 }
 
-impl Default for HealthStatus {
+impl Default for Namespace {
     fn default() -> Self {
         Self::new()
     }
 }
 
-impl HealthStatus {
-    pub fn new() -> HealthStatus {
-        HealthStatus {
-                status: None,
+impl Namespace {
+    pub fn new() -> Namespace {
+        Namespace {
+                name: None,
         }
     }
 }

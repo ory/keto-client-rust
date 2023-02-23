@@ -1,4 +1,4 @@
-# GetCheckResponse
+# CheckPermissionResult
 
 ## Properties
 
