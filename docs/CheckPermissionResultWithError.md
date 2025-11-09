@@ -1,12 +1,11 @@
-# ParseError
+# CheckPermissionResultWithError
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**end** | Option<[**models::SourcePosition**](SourcePosition.md)> |  | [optional]
-**message** | Option<**String**> |  | [optional]
-**start** | Option<[**models::SourcePosition**](SourcePosition.md)> |  | [optional]
+**allowed** | **bool** | whether the relation tuple is allowed | 
+**error** | Option<**String**> | any error generated while checking the relation tuple | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

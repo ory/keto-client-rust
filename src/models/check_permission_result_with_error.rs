@@ -11,19 +11,23 @@
 use crate::models;
 use serde::{Deserialize, Serialize};
 
-/// CheckPermissionResult : The content of the allowed field is mirrored in the HTTP status code.
+/// CheckPermissionResultWithError : Check Permission Result With Error
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
-pub struct CheckPermissionResult {
+pub struct CheckPermissionResultWithError {
     /// whether the relation tuple is allowed
     #[serde(rename = "allowed")]
     pub allowed: bool,
+    /// any error generated while checking the relation tuple
+    #[serde(rename = "error", skip_serializing_if = "Option::is_none")]
+    pub error: Option<String>,
 }
 
-impl CheckPermissionResult {
-    /// The content of the allowed field is mirrored in the HTTP status code.
-    pub fn new(allowed: bool) -> CheckPermissionResult {
-        CheckPermissionResult {
+impl CheckPermissionResultWithError {
+    /// Check Permission Result With Error
+    pub fn new(allowed: bool) -> CheckPermissionResultWithError {
+        CheckPermissionResultWithError {
             allowed,
+            error: None,
         }
     }
 }
